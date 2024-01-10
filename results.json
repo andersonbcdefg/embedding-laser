@@ -1,0 +1,290 @@
+[
+    {
+        "layer": "encoder.layer.0.attention.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7655314288265361
+        },
+        "error": 14.837712287902832
+    },
+    {
+        "layer": "encoder.layer.0.intermediate.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.759654651123413
+        },
+        "error": 50.64396667480469
+    },
+    {
+        "layer": "encoder.layer.0.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7656135613665155
+        },
+        "error": 33.48979187011719
+    },
+    {
+        "layer": "encoder.layer.1.attention.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7653411905270588
+        },
+        "error": 17.51722526550293
+    },
+    {
+        "layer": "encoder.layer.1.intermediate.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7592313912608994
+        },
+        "error": 56.17107391357422
+    },
+    {
+        "layer": "encoder.layer.1.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7661059432166213
+        },
+        "error": 36.450111389160156
+    },
+    {
+        "layer": "encoder.layer.2.attention.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7701976523771179
+        },
+        "error": 19.105703353881836
+    },
+    {
+        "layer": "encoder.layer.2.intermediate.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.761935991004255
+        },
+        "error": 58.67958450317383
+    },
+    {
+        "layer": "encoder.layer.2.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.732898381736238
+        },
+        "error": 38.42464828491211
+    },
+    {
+        "layer": "encoder.layer.3.attention.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7715061574478084
+        },
+        "error": 19.09796714782715
+    },
+    {
+        "layer": "encoder.layer.3.intermediate.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7534624656051926
+        },
+        "error": 58.95613479614258
+    },
+    {
+        "layer": "encoder.layer.3.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7653869207210007
+        },
+        "error": 38.66360092163086
+    },
+    {
+        "layer": "encoder.layer.4.attention.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7690303012542166
+        },
+        "error": 20.195777893066406
+    },
+    {
+        "layer": "encoder.layer.4.intermediate.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7638686226320974
+        },
+        "error": 59.11082077026367
+    },
+    {
+        "layer": "encoder.layer.4.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7602775534767883
+        },
+        "error": 39.416534423828125
+    },
+    {
+        "layer": "encoder.layer.5.attention.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7628406083499883
+        },
+        "error": 21.72809410095215
+    },
+    {
+        "layer": "encoder.layer.5.intermediate.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7688726603645566
+        },
+        "error": 56.583370208740234
+    },
+    {
+        "layer": "encoder.layer.5.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7560250731698871
+        },
+        "error": 37.771400451660156
+    },
+    {
+        "layer": "encoder.layer.6.attention.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7619657878389102
+        },
+        "error": 21.81397819519043
+    },
+    {
+        "layer": "encoder.layer.6.intermediate.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7576597361361704
+        },
+        "error": 54.340545654296875
+    },
+    {
+        "layer": "encoder.layer.6.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7597269819528987
+        },
+        "error": 36.8039436340332
+    },
+    {
+        "layer": "encoder.layer.7.attention.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.761671042277776
+        },
+        "error": 18.532846450805664
+    },
+    {
+        "layer": "encoder.layer.7.intermediate.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7530650050338688
+        },
+        "error": 53.61762237548828
+    },
+    {
+        "layer": "encoder.layer.7.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7578554350700514
+        },
+        "error": 36.123783111572266
+    },
+    {
+        "layer": "encoder.layer.8.attention.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7547801513111091
+        },
+        "error": 18.970911026000977
+    },
+    {
+        "layer": "encoder.layer.8.intermediate.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7636492468398864
+        },
+        "error": 53.25053787231445
+    },
+    {
+        "layer": "encoder.layer.8.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7633579123515412
+        },
+        "error": 36.62629699707031
+    },
+    {
+        "layer": "encoder.layer.9.attention.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7540114789174082
+        },
+        "error": 17.102880477905273
+    },
+    {
+        "layer": "encoder.layer.9.intermediate.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7662551507206796
+        },
+        "error": 51.28279113769531
+    },
+    {
+        "layer": "encoder.layer.9.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7695349209873432
+        },
+        "error": 35.004634857177734
+    },
+    {
+        "layer": "encoder.layer.10.attention.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7586835954886899
+        },
+        "error": 24.261072158813477
+    },
+    {
+        "layer": "encoder.layer.10.intermediate.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7721478485947387
+        },
+        "error": 43.33869934082031
+    },
+    {
+        "layer": "encoder.layer.10.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7697450574422152
+        },
+        "error": 26.348031997680664
+    },
+    {
+        "layer": "encoder.layer.11.attention.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7589754355231999
+        },
+        "error": 12.38009262084961
+    },
+    {
+        "layer": "encoder.layer.11.intermediate.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.771120846858384
+        },
+        "error": 4.081089973449707
+    },
+    {
+        "layer": "encoder.layer.11.output.dense",
+        "size": 1,
+        "result": {
+            "STS12": 0.7696200748225127
+        },
+        "error": 3.7819979190826416
+    }
+]
