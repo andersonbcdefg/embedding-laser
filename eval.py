@@ -21,7 +21,6 @@ class Task:
     mteb_task: str
     metric: list[str]  # list of keys to extract the metric
 
-
 # example: Task(mteb_task="Banking77Classification", metric=["test", "accuracy"])
 # example: Task(mteb_task="STS12", metric=["test", "cos_sim", "spearman"])
 
@@ -48,7 +47,8 @@ class OnlineEvaluator:
             results[task.mteb_task] = result
         del model
         torch.cuda.empty_cache()
-        return results
+        avg = sum(results.values()) / len(results)
+        return avg, results
 
 def pool(
     hiddens,

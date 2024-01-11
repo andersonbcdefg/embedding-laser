@@ -1,56 +1,85 @@
-import fire
 import copy
-import json
-import torch
+import random
+import numpy as np
 import torch.nn as nn
-from dataclasses import dataclass
-from eval import EmbeddingModelForEval, OnlineEvaluator
-from layers import apply_laser, apply_laser_single
+from layers import LaserLinear
+from eval import OnlineEvaluator
 
-def main(
-    model: str = "BAAI/bge-small-en-v1.5",
-    target_module_strs: list[str] = ["intermediate.dense", "output.dense"],
-    sizes: list[int] = [1],
-    mteb_tasks: list[dict] = [
-        # {"mteb_task": "Banking77Classification", "metric": ["test", "accuracy"]},
-        {"mteb_task": "STS12", "metric": ["test", "cos_sim", "spearman"]},
-    ],
-):
-    model = EmbeddingModelForEval(model)
-    model.to(torch.device("mps"))
-    evaluator = OnlineEvaluator(mteb_tasks)
-    linear_layers = []
-    for name, module in model.model.named_modules():
-        # print(name)
-        if isinstance(module, nn.Linear) and any([target_module_str in name for target_module_str in target_module_strs]):
-            linear_layers.append(name)
+def replace_module(model, module_name, new_module):
+    """
+    Replace a submodule within a model given the submodule's name and the new module.
 
-    initial_result = evaluator.run(model)
-    all_results = []
-    print(f"Initial result: {initial_result}")
-    print(f"Testing LASER on {len(linear_layers)} linear layers...")
-    for linear_layer in linear_layers:
-        for s in sizes:
-            copied = copy.deepcopy(model)
-            error = apply_laser_single(copied.model, linear_layer, s)
-            copied.to(torch.device("mps"))
-            result = evaluator.run(copied)
-            all_results.append({
-                "layer": linear_layer,
-                "size": s,
-                "result": result,
-                "error": error
-            })
+    :param model: The model or submodule containing the module to replace.
+    :param module_name: The name of the module to replace.
+    :param new_module: The new module to insert in place of the old one.
+    """
+    # Split the module name into parts
+    parts = module_name.split('.')
+    # Access the submodule that is the parent of the target module
+    parent = model
+    for part in parts[:-1]:  # Go until the second last part
+        parent = getattr(parent, part)
     
-    json.dump(all_results, open("results.json", "w"), indent=4)
+    # Replace the target module
+    setattr(parent, parts[-1], new_module)
 
-    print("LASER-ing the 18 layers with best results...")
-    best_results = sorted(all_results, key=lambda x: -x["result"]["STS12"])[:18]
-    for result in best_results:
-        apply_laser_single(model.model, result["layer"], result["size"])
+def apply_laser_single(model: nn.Module, target_module: str, bottleneck_features: int):
+    # Find the target module
+    for name, module in model.named_modules():
+        if name == target_module:
+            # Once the target module is found, create a new module to replace it
+            new_module = LaserLinear.from_linear(module, bottleneck_features)
+            # Replace the target module with the new module using the replace_module function
+            replace_module(model, target_module, new_module)
+            break
+    else:
+        raise AttributeError(f"No module named '{target_module}' found in the model.")
+    return new_module.error, new_module.compression
 
-    final_result = evaluator.run(model)
-    print(f"Final result: {final_result}")
+def apply_laser(model: nn.Module, target_modules: list[str], bottleneck_features: int):
+    errors = []
+    compression = []
+    for target_module in target_modules:
+        error, comp = apply_laser_single(model, target_module, bottleneck_features)
+        errors.append(error)
+        compression.append(comp)
+    return sum(compression), np.mean(errors)
 
-if __name__ == "__main__":
-    fire.Fire(main)
+def generate_proposals(
+    model: nn.Module,
+    num_modules: int,
+    num_proposals: int,
+    bottleneck_features: int,
+    target_patterns: list[str],
+    exclude_patterns: list[str],
+):  
+    linear_layers = []
+    for name, module in model.named_modules():
+        if (
+            isinstance(module, nn.Linear) and 
+            any([pattern in name for pattern in target_patterns])
+        ):
+            linear_layers.append(name)
+    linear_layers = [x for x in linear_layers if "laser" not in x]
+    proposals = set()
+    while len(proposals) < num_proposals:
+        proposal = random.sample(linear_layers, k=num_modules)
+        proposals.add(tuple(proposal))
+    
+    return proposals
+
+def evaluate_proposal(
+    model: nn.Module,
+    target_modules: list[str],
+    bottleneck_features: int,
+    evaluator: OnlineEvaluator
+):
+    replica = copy.deepcopy(model)
+    compression, error = apply_laser(replica, target_modules, bottleneck_features)
+    avg, results = evaluator.run(replica)
+    return {
+        "layers": target_modules,
+        "score": avg,
+        "compression": compression,
+        "error": error,
+    }

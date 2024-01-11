@@ -9,10 +9,12 @@ class LaserLinear(nn.Module):
         bottleneck_features: int,
         out_features: int,
         bias: bool,
-        error: Optional[float] = None # to store reconstruction error
+        error: Optional[float] = None, # to store reconstruction error
+        compression: Optional[int] = None # store # of params saved
     ):
         super().__init__()
         self.error = error
+        self.compression = compression
         self.in_features = in_features
         self.bottleneck_features = bottleneck_features
         self.out_features = out_features
@@ -38,11 +40,11 @@ class LaserLinear(nn.Module):
         s_r = s[: bottleneck_features]
         vh_r = vh[: bottleneck_features, :]
 
-        # measure the reconstruction error (frobenius norm)
-        error = torch.linalg.norm(
-            torch.mm(torch.mm(u_r, torch.diag(s_r)), vh_r) - linear.weight.data,
-            ord="fro"
-        )
+        # measure the reconstruction error (MSE)
+        error = torch.mean((linear.weight.data - torch.mm(torch.mm(u_r, torch.diag(s_r)), vh_r)) ** 2)
+        old_params = linear.weight.numel()
+        new_params = bottleneck_features * (linear.in_features + linear.out_features)
+        compression = old_params - new_params
 
         # create a new instance of LaserLinear
         new_linear = cls(
@@ -51,7 +53,8 @@ class LaserLinear(nn.Module):
             linear.out_features,
             linear.bias is not None,
             # sum the error, return normal float not tensor
-            error=error.sum().item()
+            error=error.item(),
+            compression=compression
         )
 
         # set the weights of the new instance
@@ -63,40 +66,3 @@ class LaserLinear(nn.Module):
             new_linear.laser2.bias.data = linear.bias.data
 
         return new_linear
-
-def replace_module(model, module_name, new_module):
-    """
-    Replace a submodule within a model given the submodule's name and the new module.
-
-    :param model: The model or submodule containing the module to replace.
-    :param module_name: The name of the module to replace.
-    :param new_module: The new module to insert in place of the old one.
-    """
-    # Split the module name into parts
-    parts = module_name.split('.')
-    # Access the submodule that is the parent of the target module
-    parent = model
-    for part in parts[:-1]:  # Go until the second last part
-        parent = getattr(parent, part)
-    
-    # Replace the target module
-    setattr(parent, parts[-1], new_module)
-
-def apply_laser_single(model: nn.Module, target_module: str, bottleneck_features: int):
-    # Find the target module
-    for name, module in model.named_modules():
-        if name == target_module:
-            # Once the target module is found, create a new module to replace it
-            new_module = LaserLinear.from_linear(module, bottleneck_features)
-            # Replace the target module with the new module using the replace_module function
-            replace_module(model, target_module, new_module)
-            break
-    else:
-        raise AttributeError(f"No module named '{target_module}' found in the model.")
-    return new_module.error
-
-def apply_laser(model: nn.Module, target_modules: list[str], bottleneck_features: int):
-    errors = []
-    for target_module in target_modules:
-        errors.append(apply_laser_single(model, target_module, bottleneck_features))
-    return errors

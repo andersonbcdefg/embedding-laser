@@ -1,290 +1,522 @@
 [
     {
-        "layer": "encoder.layer.0.attention.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7655314288265361
-        },
-        "error": 14.837712287902832
+        "layers": [
+            "model.encoder.layer.2.attention.self.value",
+            "model.encoder.layer.0.attention.output.dense",
+            "model.encoder.layer.5.output.dense",
+            "model.encoder.layer.5.attention.self.key",
+            "model.encoder.layer.4.intermediate.dense",
+            "model.encoder.layer.2.output.dense"
+        ],
+        "score": 0.7043872006956936,
+        "compression": 2203776,
+        "error": 0.0038045154845652482
     },
     {
-        "layer": "encoder.layer.0.intermediate.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.759654651123413
-        },
-        "error": 50.64396667480469
+        "layers": [
+            "model.encoder.layer.2.attention.self.query",
+            "model.encoder.layer.8.attention.self.query",
+            "model.encoder.layer.5.output.dense",
+            "model.encoder.layer.9.intermediate.dense",
+            "model.encoder.layer.7.intermediate.dense",
+            "model.encoder.layer.3.attention.self.value"
+        ],
+        "score": 0.7389186177851192,
+        "compression": 2203776,
+        "error": 0.004974058402391772
     },
     {
-        "layer": "encoder.layer.0.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7656135613665155
-        },
-        "error": 33.48979187011719
+        "layers": [
+            "model.encoder.layer.4.intermediate.dense",
+            "model.encoder.layer.0.attention.self.query",
+            "model.encoder.layer.1.attention.output.dense",
+            "model.encoder.layer.1.attention.self.key",
+            "model.encoder.layer.4.output.dense",
+            "model.encoder.layer.1.attention.self.value"
+        ],
+        "score": 0.754348329445225,
+        "compression": 1762560,
+        "error": 0.005193668611658116
     },
     {
-        "layer": "encoder.layer.1.attention.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7653411905270588
-        },
-        "error": 17.51722526550293
+        "layers": [
+            "model.encoder.layer.4.attention.output.dense",
+            "model.encoder.layer.10.attention.output.dense",
+            "model.encoder.layer.8.attention.self.value",
+            "model.encoder.layer.9.intermediate.dense",
+            "model.encoder.layer.3.attention.self.query",
+            "model.encoder.layer.5.attention.output.dense"
+        ],
+        "score": 0.7248570943383462,
+        "compression": 1321344,
+        "error": 0.004319241464448472
     },
     {
-        "layer": "encoder.layer.1.intermediate.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7592313912608994
-        },
-        "error": 56.17107391357422
+        "layers": [
+            "model.encoder.layer.2.attention.self.value",
+            "model.encoder.layer.11.attention.self.value",
+            "model.encoder.layer.5.intermediate.dense",
+            "model.encoder.layer.7.attention.self.key",
+            "model.pooler.dense",
+            "model.encoder.layer.6.attention.self.key"
+        ],
+        "score": 0.7528006749542022,
+        "compression": 1321344,
+        "error": 0.004219498518068576
     },
     {
-        "layer": "encoder.layer.1.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7661059432166213
-        },
-        "error": 36.450111389160156
+        "layers": [
+            "model.encoder.layer.3.intermediate.dense",
+            "model.encoder.layer.10.intermediate.dense",
+            "model.encoder.layer.2.attention.self.key",
+            "model.encoder.layer.6.attention.self.value",
+            "model.encoder.layer.11.output.dense",
+            "model.encoder.layer.4.attention.self.key"
+        ],
+        "score": 0.7336223834945184,
+        "compression": 2203776,
+        "error": 0.004741603235440077
     },
     {
-        "layer": "encoder.layer.2.attention.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7701976523771179
-        },
-        "error": 19.105703353881836
+        "layers": [
+            "model.encoder.layer.8.intermediate.dense",
+            "model.encoder.layer.10.attention.self.value",
+            "model.encoder.layer.10.attention.self.key",
+            "model.encoder.layer.4.attention.output.dense",
+            "model.encoder.layer.8.attention.output.dense",
+            "model.encoder.layer.1.attention.self.key"
+        ],
+        "score": 0.7360183252344618,
+        "compression": 1321344,
+        "error": 0.004623476105431716
     },
     {
-        "layer": "encoder.layer.2.intermediate.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.761935991004255
-        },
-        "error": 58.67958450317383
+        "layers": [
+            "model.encoder.layer.5.attention.self.key",
+            "model.encoder.layer.4.intermediate.dense",
+            "model.encoder.layer.1.attention.self.value",
+            "model.encoder.layer.7.attention.self.key",
+            "model.encoder.layer.0.attention.self.value",
+            "model.encoder.layer.4.output.dense"
+        ],
+        "score": 0.7362750622986286,
+        "compression": 1762560,
+        "error": 0.004409680356426786
     },
     {
-        "layer": "encoder.layer.2.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.732898381736238
-        },
-        "error": 38.42464828491211
+        "layers": [
+            "model.encoder.layer.5.attention.self.query",
+            "model.encoder.layer.1.attention.self.key",
+            "model.pooler.dense",
+            "model.encoder.layer.1.intermediate.dense",
+            "model.encoder.layer.11.attention.output.dense",
+            "model.encoder.layer.10.attention.self.value"
+        ],
+        "score": 0.6434951053915896,
+        "compression": 1321344,
+        "error": 0.0043743746682594065
     },
     {
-        "layer": "encoder.layer.3.attention.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7715061574478084
-        },
-        "error": 19.09796714782715
+        "layers": [
+            "model.encoder.layer.7.output.dense",
+            "model.encoder.layer.7.attention.output.dense",
+            "model.encoder.layer.4.attention.self.value",
+            "model.encoder.layer.5.intermediate.dense",
+            "model.encoder.layer.1.attention.output.dense",
+            "model.encoder.layer.3.attention.output.dense"
+        ],
+        "score": 0.7341051771315996,
+        "compression": 1762560,
+        "error": 0.0031331535816813507
     },
     {
-        "layer": "encoder.layer.3.intermediate.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7534624656051926
-        },
-        "error": 58.95613479614258
+        "layers": [
+            "model.encoder.layer.8.attention.self.query",
+            "model.encoder.layer.1.intermediate.dense",
+            "model.encoder.layer.11.intermediate.dense",
+            "model.encoder.layer.6.attention.self.key",
+            "model.encoder.layer.7.intermediate.dense",
+            "model.encoder.layer.4.attention.self.query"
+        ],
+        "score": 0.7340802425403323,
+        "compression": 2203776,
+        "error": 0.005175297853080944
     },
     {
-        "layer": "encoder.layer.3.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7653869207210007
-        },
-        "error": 38.66360092163086
+        "layers": [
+            "model.encoder.layer.3.attention.self.key",
+            "model.encoder.layer.7.output.dense",
+            "model.encoder.layer.3.attention.self.value",
+            "model.encoder.layer.11.attention.output.dense",
+            "model.encoder.layer.11.attention.self.key",
+            "model.encoder.layer.0.attention.self.query"
+        ],
+        "score": 0.7429006673541434,
+        "compression": 1321344,
+        "error": 0.004794020710202555
     },
     {
-        "layer": "encoder.layer.4.attention.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7690303012542166
-        },
-        "error": 20.195777893066406
+        "layers": [
+            "model.encoder.layer.1.attention.self.key",
+            "model.encoder.layer.8.attention.output.dense",
+            "model.encoder.layer.7.attention.self.key",
+            "model.encoder.layer.2.attention.self.key",
+            "model.encoder.layer.5.attention.self.key",
+            "model.encoder.layer.4.attention.self.query"
+        ],
+        "score": 0.7134673006085125,
+        "compression": 880128,
+        "error": 0.00633780211986353
     },
     {
-        "layer": "encoder.layer.4.intermediate.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7638686226320974
-        },
-        "error": 59.11082077026367
+        "layers": [
+            "model.encoder.layer.11.attention.self.value",
+            "model.encoder.layer.5.attention.self.key",
+            "model.encoder.layer.3.attention.self.value",
+            "model.encoder.layer.9.output.dense",
+            "model.encoder.layer.8.attention.self.query",
+            "model.encoder.layer.5.intermediate.dense"
+        ],
+        "score": 0.7351759416009271,
+        "compression": 1762560,
+        "error": 0.004645119615209599
     },
     {
-        "layer": "encoder.layer.4.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7602775534767883
-        },
-        "error": 39.416534423828125
+        "layers": [
+            "model.encoder.layer.11.attention.output.dense",
+            "model.encoder.layer.8.output.dense",
+            "model.encoder.layer.4.intermediate.dense",
+            "model.encoder.layer.9.attention.output.dense",
+            "model.encoder.layer.5.output.dense",
+            "model.encoder.layer.0.attention.self.query"
+        ],
+        "score": 0.7254427897671568,
+        "compression": 2203776,
+        "error": 0.003912631150645514
     },
     {
-        "layer": "encoder.layer.5.attention.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7628406083499883
-        },
-        "error": 21.72809410095215
+        "layers": [
+            "model.encoder.layer.1.attention.self.value",
+            "model.encoder.layer.11.attention.self.value",
+            "model.encoder.layer.2.intermediate.dense",
+            "model.encoder.layer.11.intermediate.dense",
+            "model.encoder.layer.10.attention.self.query",
+            "model.encoder.layer.3.attention.output.dense"
+        ],
+        "score": 0.6883325681280442,
+        "compression": 1762560,
+        "error": 0.0031717537264436637
     },
     {
-        "layer": "encoder.layer.5.intermediate.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7688726603645566
-        },
-        "error": 56.583370208740234
+        "layers": [
+            "model.encoder.layer.7.attention.self.key",
+            "model.encoder.layer.2.attention.self.key",
+            "model.encoder.layer.1.output.dense",
+            "model.encoder.layer.8.attention.self.query",
+            "model.encoder.layer.2.attention.self.query",
+            "model.encoder.layer.7.attention.output.dense"
+        ],
+        "score": 0.7256413687987958,
+        "compression": 1321344,
+        "error": 0.005527555205238362
     },
     {
-        "layer": "encoder.layer.5.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7560250731698871
-        },
-        "error": 37.771400451660156
+        "layers": [
+            "model.encoder.layer.3.attention.output.dense",
+            "model.encoder.layer.8.attention.self.query",
+            "model.encoder.layer.0.attention.self.query",
+            "model.encoder.layer.8.attention.self.key",
+            "model.encoder.layer.5.attention.output.dense",
+            "model.encoder.layer.9.intermediate.dense"
+        ],
+        "score": 0.74988763865477,
+        "compression": 1321344,
+        "error": 0.005625089242433508
     },
     {
-        "layer": "encoder.layer.6.attention.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7619657878389102
-        },
-        "error": 21.81397819519043
+        "layers": [
+            "model.encoder.layer.5.attention.output.dense",
+            "model.encoder.layer.11.attention.self.key",
+            "model.encoder.layer.9.attention.self.query",
+            "model.encoder.layer.4.attention.output.dense",
+            "model.encoder.layer.4.attention.self.key",
+            "model.encoder.layer.6.attention.output.dense"
+        ],
+        "score": 0.7252268170473252,
+        "compression": 880128,
+        "error": 0.004549887147732079
     },
     {
-        "layer": "encoder.layer.6.intermediate.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7576597361361704
-        },
-        "error": 54.340545654296875
+        "layers": [
+            "model.encoder.layer.6.output.dense",
+            "model.encoder.layer.10.attention.self.value",
+            "model.encoder.layer.0.attention.self.value",
+            "model.encoder.layer.2.attention.self.value",
+            "model.encoder.layer.7.intermediate.dense",
+            "model.encoder.layer.6.attention.output.dense"
+        ],
+        "score": 0.705891876508008,
+        "compression": 1762560,
+        "error": 0.003455114182240019
     },
     {
-        "layer": "encoder.layer.6.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7597269819528987
-        },
-        "error": 36.8039436340332
+        "layers": [
+            "model.encoder.layer.1.attention.self.query",
+            "model.encoder.layer.11.attention.output.dense",
+            "model.encoder.layer.0.attention.self.key",
+            "model.encoder.layer.1.output.dense",
+            "model.encoder.layer.5.attention.self.query",
+            "model.encoder.layer.3.attention.output.dense"
+        ],
+        "score": 0.7050055449727346,
+        "compression": 1321344,
+        "error": 0.005006643400217096
     },
     {
-        "layer": "encoder.layer.7.attention.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.761671042277776
-        },
-        "error": 18.532846450805664
+        "layers": [
+            "model.encoder.layer.10.attention.self.value",
+            "model.encoder.layer.4.attention.output.dense",
+            "model.encoder.layer.11.attention.output.dense",
+            "model.encoder.layer.2.intermediate.dense",
+            "model.encoder.layer.10.attention.self.query",
+            "model.encoder.layer.5.attention.self.key"
+        ],
+        "score": 0.6471484900647129,
+        "compression": 1321344,
+        "error": 0.004430125040623049
     },
     {
-        "layer": "encoder.layer.7.intermediate.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7530650050338688
-        },
-        "error": 53.61762237548828
+        "layers": [
+            "model.encoder.layer.8.attention.output.dense",
+            "model.encoder.layer.7.output.dense",
+            "model.encoder.layer.9.attention.self.value",
+            "model.encoder.layer.11.attention.self.query",
+            "model.encoder.layer.9.attention.output.dense",
+            "model.encoder.layer.2.attention.output.dense"
+        ],
+        "score": 0.7449228772432239,
+        "compression": 1321344,
+        "error": 0.0028394743955383697
     },
     {
-        "layer": "encoder.layer.7.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7578554350700514
-        },
-        "error": 36.123783111572266
+        "layers": [
+            "model.encoder.layer.4.attention.self.query",
+            "model.encoder.layer.11.attention.self.value",
+            "model.encoder.layer.9.attention.output.dense",
+            "model.encoder.layer.2.output.dense",
+            "model.encoder.layer.9.attention.self.query",
+            "model.encoder.layer.3.output.dense"
+        ],
+        "score": 0.717295804944905,
+        "compression": 1762560,
+        "error": 0.0038516250206157565
     },
     {
-        "layer": "encoder.layer.8.attention.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7547801513111091
-        },
-        "error": 18.970911026000977
+        "layers": [
+            "model.encoder.layer.6.intermediate.dense",
+            "model.encoder.layer.8.attention.output.dense",
+            "model.encoder.layer.5.intermediate.dense",
+            "model.encoder.layer.1.attention.self.value",
+            "model.encoder.layer.4.attention.output.dense",
+            "model.pooler.dense"
+        ],
+        "score": 0.7286502390855545,
+        "compression": 1762560,
+        "error": 0.003077104099550828
     },
     {
-        "layer": "encoder.layer.8.intermediate.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7636492468398864
-        },
-        "error": 53.25053787231445
+        "layers": [
+            "model.encoder.layer.7.intermediate.dense",
+            "model.encoder.layer.4.intermediate.dense",
+            "model.encoder.layer.2.output.dense",
+            "model.encoder.layer.10.output.dense",
+            "model.encoder.layer.10.attention.output.dense",
+            "model.encoder.layer.1.output.dense"
+        ],
+        "score": 0.6822793173146937,
+        "compression": 3086208,
+        "error": 0.0034537475051668784
     },
     {
-        "layer": "encoder.layer.8.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7633579123515412
-        },
-        "error": 36.62629699707031
+        "layers": [
+            "model.encoder.layer.1.output.dense",
+            "model.encoder.layer.4.attention.output.dense",
+            "model.encoder.layer.4.output.dense",
+            "model.encoder.layer.10.intermediate.dense",
+            "model.encoder.layer.0.attention.output.dense",
+            "model.encoder.layer.4.attention.self.key"
+        ],
+        "score": 0.7363756342590955,
+        "compression": 2203776,
+        "error": 0.003191616366772602
     },
     {
-        "layer": "encoder.layer.9.attention.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7540114789174082
-        },
-        "error": 17.102880477905273
+        "layers": [
+            "model.encoder.layer.9.attention.self.key",
+            "model.encoder.layer.3.attention.self.value",
+            "model.encoder.layer.9.intermediate.dense",
+            "model.encoder.layer.0.attention.self.query",
+            "model.encoder.layer.5.attention.output.dense",
+            "model.encoder.layer.10.intermediate.dense"
+        ],
+        "score": 0.7462281656719747,
+        "compression": 1762560,
+        "error": 0.0050255672152464586
     },
     {
-        "layer": "encoder.layer.9.intermediate.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7662551507206796
-        },
-        "error": 51.28279113769531
+        "layers": [
+            "model.encoder.layer.5.output.dense",
+            "model.encoder.layer.9.output.dense",
+            "model.encoder.layer.5.attention.self.key",
+            "model.encoder.layer.1.attention.output.dense",
+            "model.encoder.layer.9.attention.self.value",
+            "model.encoder.layer.2.attention.self.query"
+        ],
+        "score": 0.7294586605160062,
+        "compression": 1762560,
+        "error": 0.0039701234782114625
     },
     {
-        "layer": "encoder.layer.9.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7695349209873432
-        },
-        "error": 35.004634857177734
+        "layers": [
+            "model.encoder.layer.11.output.dense",
+            "model.encoder.layer.4.intermediate.dense",
+            "model.encoder.layer.6.output.dense",
+            "model.encoder.layer.1.attention.self.key",
+            "model.encoder.layer.4.output.dense",
+            "model.encoder.layer.0.intermediate.dense"
+        ],
+        "score": 0.7358935754004878,
+        "compression": 3086208,
+        "error": 0.003862534997400265
     },
     {
-        "layer": "encoder.layer.10.attention.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7586835954886899
-        },
-        "error": 24.261072158813477
+        "layers": [
+            "model.encoder.layer.8.attention.self.key",
+            "model.encoder.layer.8.attention.self.query",
+            "model.encoder.layer.9.output.dense",
+            "model.encoder.layer.11.attention.self.key",
+            "model.encoder.layer.5.attention.self.value",
+            "model.encoder.layer.0.attention.self.key"
+        ],
+        "score": 0.746246487813389,
+        "compression": 1321344,
+        "error": 0.005829370697028935
     },
     {
-        "layer": "encoder.layer.10.intermediate.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7721478485947387
-        },
-        "error": 43.33869934082031
+        "layers": [
+            "model.encoder.layer.2.attention.self.key",
+            "model.encoder.layer.11.attention.output.dense",
+            "model.encoder.layer.1.output.dense",
+            "model.encoder.layer.9.attention.self.query",
+            "model.encoder.layer.0.intermediate.dense",
+            "model.encoder.layer.0.attention.output.dense"
+        ],
+        "score": 0.6648837101964911,
+        "compression": 1762560,
+        "error": 0.003831577235056708
     },
     {
-        "layer": "encoder.layer.10.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7697450574422152
-        },
-        "error": 26.348031997680664
+        "layers": [
+            "model.encoder.layer.7.attention.output.dense",
+            "model.encoder.layer.9.attention.self.query",
+            "model.encoder.layer.8.intermediate.dense",
+            "model.encoder.layer.9.output.dense",
+            "model.encoder.layer.1.attention.self.query",
+            "model.encoder.layer.2.attention.self.query"
+        ],
+        "score": 0.735715404094151,
+        "compression": 1762560,
+        "error": 0.005228705160940687
     },
     {
-        "layer": "encoder.layer.11.attention.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7589754355231999
-        },
-        "error": 12.38009262084961
+        "layers": [
+            "model.encoder.layer.1.attention.self.value",
+            "model.encoder.layer.0.output.dense",
+            "model.encoder.layer.4.output.dense",
+            "model.encoder.layer.6.attention.self.key",
+            "model.encoder.layer.1.intermediate.dense",
+            "model.encoder.layer.11.intermediate.dense"
+        ],
+        "score": 0.7291243817466694,
+        "compression": 2644992,
+        "error": 0.0032469936668348964
     },
     {
-        "layer": "encoder.layer.11.intermediate.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.771120846858384
-        },
-        "error": 4.081089973449707
+        "layers": [
+            "model.encoder.layer.2.output.dense",
+            "model.encoder.layer.5.attention.self.key",
+            "model.encoder.layer.11.attention.self.value",
+            "model.encoder.layer.5.attention.output.dense",
+            "model.encoder.layer.9.attention.self.query",
+            "model.encoder.layer.8.attention.output.dense"
+        ],
+        "score": 0.7141900390498315,
+        "compression": 1321344,
+        "error": 0.004051741484242181
     },
     {
-        "layer": "encoder.layer.11.output.dense",
-        "size": 1,
-        "result": {
-            "STS12": 0.7696200748225127
-        },
-        "error": 3.7819979190826416
+        "layers": [
+            "model.encoder.layer.3.attention.self.value",
+            "model.encoder.layer.9.attention.self.query",
+            "model.encoder.layer.7.attention.self.key",
+            "model.encoder.layer.5.output.dense",
+            "model.encoder.layer.3.attention.self.key",
+            "model.encoder.layer.4.attention.output.dense"
+        ],
+        "score": 0.7451037949504403,
+        "compression": 1321344,
+        "error": 0.004821638576686382
+    },
+    {
+        "layers": [
+            "model.encoder.layer.7.attention.self.value",
+            "model.encoder.layer.5.attention.output.dense",
+            "model.encoder.layer.0.output.dense",
+            "model.encoder.layer.9.intermediate.dense",
+            "model.encoder.layer.11.attention.self.value",
+            "model.encoder.layer.2.attention.output.dense"
+        ],
+        "score": 0.7267583031344086,
+        "compression": 1762560,
+        "error": 0.0030954325920902193
+    },
+    {
+        "layers": [
+            "model.encoder.layer.1.attention.self.query",
+            "model.encoder.layer.2.attention.self.value",
+            "model.encoder.layer.3.attention.self.key",
+            "model.encoder.layer.3.attention.self.value",
+            "model.encoder.layer.9.attention.self.query",
+            "model.encoder.layer.1.attention.self.value"
+        ],
+        "score": 0.732659200668695,
+        "compression": 880128,
+        "error": 0.005307077352578442
+    },
+    {
+        "layers": [
+            "model.encoder.layer.0.intermediate.dense",
+            "model.encoder.layer.7.attention.self.query",
+            "model.encoder.layer.1.attention.output.dense",
+            "model.encoder.layer.10.output.dense",
+            "model.encoder.layer.5.attention.self.query",
+            "model.encoder.layer.5.output.dense"
+        ],
+        "score": 0.7328272211576615,
+        "compression": 2203776,
+        "error": 0.003926875477191061
+    },
+    {
+        "layers": [
+            "model.encoder.layer.10.attention.self.query",
+            "model.encoder.layer.8.intermediate.dense",
+            "model.encoder.layer.4.attention.self.query",
+            "model.encoder.layer.2.attention.self.query",
+            "model.encoder.layer.11.attention.output.dense",
+            "model.encoder.layer.9.attention.self.key"
+        ],
+        "score": 0.646666211667521,
+        "compression": 1321344,
+        "error": 0.0052054140251129866
     }
 ]
